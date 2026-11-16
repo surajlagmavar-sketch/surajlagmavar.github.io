@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suraj Lagmavar — Product Designer</title>
+  <meta name="description" content="Portfolio of Suraj Lagmavar, product designer. Helmets, footwear, furniture and public systems — from research to final render." />
+  <meta name="theme-color" content="#060b18" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23060b18%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%226%22 fill=%22%23e10b2b%22/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('reduce-motion');
+    if (sessionStorage.getItem('seenIntro') || sessionStorage.getItem('arriving') || location.hash) document.documentElement.classList.add('no-preloader');
+    if (sessionStorage.getItem('arriving')) document.documentElement.classList.add('is-arriving');
+  </script>
+</head>
+<body>
+
+  <!-- intro loader (plays once per visit) -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__name"><span>Suraj Lagmavar</span></div>
+      <div class="preloader__bar"><span></span></div>
+      <div class="preloader__row mono"><span>Tidying the desk…</span><span class="preloader__count">000</span></div>
+    </div>
+  </div>
+  <div class="transition" aria-hidden="true"><div class="transition__panel transition__panel--red"></div><div class="transition__panel transition__panel--navy"></div></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="index.html" aria-label="Home"><i></i>Suraj Lagmavar</a>
+      <nav class="nav__links" aria-label="Main">
+        <a class="nav__link" href="#work">Work</a>
+        <a class="nav__link" href="#lab">Design Lab</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn--sm nav__cta" href="#contact" data-magnetic>Let's talk
+        <svg class="btn__arrow" viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg>
+      </a>
+      <button class="nav__menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO — the messy desk ============
+         Everything inside .desk is a physics object (js/desk.js): drag and throw it.
+         data-x = where it lands (0 = left, 1 = right). Products are links to their case studies. -->
+    <section class="hero" id="top">
+      <div class="studio-grid" aria-hidden="true"></div>
+
+      <h1 class="hero__title display">
+        <span class="ht-line ht-1"><span>Designing</span></span>
+        <span class="ht-line ht-2"><span>What's <em>Next</em></span></span>
+      </h1>
+
+      <div class="hero__intro" data-hero-fade>
+        <span class="eyebrow">Product Designer — Student Portfolio</span>
+        <p>Sketchbook hoarder, CAD wrangler, serial prototyper. These are a few of the things I've designed.</p>
+      </div>
+
+      <div class="desk__doodle" data-hero-fade aria-hidden="true">
+        <span class="hand">psst… these are my projects.<br>grab one. throw it.<br>click one to open it.</span>
+        <svg class="desk__arrow" viewBox="0 0 100 90" fill="none"><path d="M12 8c40-6 74 14 70 66" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M68 62l14 16 12-18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="desk" data-desk role="group" aria-label="Suraj's desk: drag and throw the projects, or open one">
+        <!-- tools + notes first, so the projects land on top -->
+        <div class="desk__item desk__ruler" data-desk-item data-extra data-x="0.2" data-round="0.2" data-density="0.002" data-cursor="Throw" aria-hidden="true">
+          <svg viewBox="0 0 300 34" preserveAspectRatio="none"><rect x="1" y="1" width="298" height="32" rx="4" fill="#d8dde6" stroke="#9aa3b2"/><g stroke="#4a5568" stroke-width="1.4">
+            <path d="M15 1v12M30 1v7M45 1v7M60 1v12M75 1v7M90 1v7M105 1v12M120 1v7M135 1v7M150 1v12M165 1v7M180 1v7M195 1v12M210 1v7M225 1v7M240 1v12M255 1v7M270 1v7M285 1v12"/></g>
+            <text x="150" y="27" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#4a5568" letter-spacing="2">MEASURE TWICE · CAD ONCE</text></svg>
+        </div>
+        <div class="desk__item desk__note" data-desk-item data-x="0.33" data-density="0.0009" data-round="0.04" data-cursor="Throw" aria-hidden="true">v12_final_<br>FINAL.stp<small>(it wasn't)</small></div>
+        <div class="desk__item desk__pencil" data-desk-item data-extra data-x="0.55" data-round="0.5" data-density="0.002" data-cursor="Throw" aria-hidden="true">
+          <svg viewBox="0 0 260 26"><path d="M34 2h196v22H34z" fill="#e10b2b"/><path d="M34 9h196" stroke="#ff5a6e" stroke-width="2"/><path d="M34 17h196" stroke="#a5061f" stroke-width="2"/><path d="M230 2h14v22h-14z" fill="#c7ccd6"/><path d="M233 2v22M238 2v22" stroke="#9aa3b2"/><rect x="244" y="2" width="14" height="22" rx="5" fill="#f4a3b4"/><path d="M34 2L4 13l30 11z" fill="#f1d9b5"/><path d="M14 9.4L4 13l10 3.6z" fill="#2a2f3a"/></svg>
+        </div>
+        <div class="desk__item desk__note desk__note--red" data-desk-item data-x="0.6" data-density="0.0009" data-round="0.04" data-cursor="Throw" aria-hidden="true">deadline:<br>tomorrow<small>(again)</small></div>
+        <a class="desk__item desk__sketch" href="#lab" data-desk-item data-extra data-x="0.76" data-round="0.04" data-density="0.001" data-cursor="Lab" aria-label="Sketches: go to the Design Lab">
+          <img src="assets/img/regen/sketch-sheet-02.jpg" alt="" draggable="false" />
+        </a>
+        <div class="desk__item desk__note" data-desk-item data-extra data-x="0.9" data-density="0.0009" data-round="0.04" data-cursor="Throw" aria-hidden="true">idea #47<small>this one's good. trust me.</small></div>
+
+        <a class="desk__item desk__helmet" href="work/helmet.html" data-desk-item data-shape="circle" data-x="0.14" data-bounce="0.45" data-density="0.0022" data-cursor="Helmet" aria-label="Open the Helmet Design project">
+          <img src="assets/img/helmet/render-side-cutout.webp" alt="" draggable="false" />
+        </a>
+        <a class="desk__item desk__shoe" href="work/regen.html" data-desk-item data-x="0.42" data-bh="0.85" data-round="0.3" data-density="0.0018" data-cursor="REGEN" aria-label="Open the REGEN Shoes project">
+          <img src="assets/img/regen/render-side-cutout.png" alt="" draggable="false" />
+        </a>
+        <a class="desk__item desk__chair" href="work/chair.html" data-desk-item data-x="0.66" data-round="0.1" data-density="0.0024" data-cursor="Chair" aria-label="Open the Standing Chair project">
+          <img src="assets/img/chair/render-01-cutout.webp" alt="" draggable="false" />
+        </a>
+        <a class="desk__item desk__kiosk" href="work/prithvi.html" data-desk-item data-x="0.86" data-round="0.12" data-density="0.0026" data-cursor="PRITHVI+" aria-label="Open the PRITHVI+ Kiosk project">
+          <img src="assets/img/prithvi/cad-front-cutout.png" alt="" draggable="false" />
+        </a>
+      </div>
+      <div class="desk__edge" aria-hidden="true"></div>
+
+      <div class="hero__statement">
+        <span class="eyebrow">Hello —</span>
+        <p>I'm <strong>Suraj</strong>, a product design student. I make things people want to <strong>pick up, wear and use</strong> <span class="dim">— and I show every step it took to get there.</span></p>
+        <a class="btn" href="#work" data-magnetic>See the work
+          <svg class="btn__arrow" viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__bottom" data-hero-fade>
+        <div class="hero__name">
+          <strong>Suraj Lagmavar</strong>
+          <span class="mono">Product Designer — 2026</span>
+        </div>
+        <button class="desk__reset hand" type="button" data-desk-reset>↻ drop them again</button>
+        <div class="scroll-cue mono"><span>Scroll to explore</span><span class="scroll-cue__line"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <span class="section-head__index mono">01 / Selected Work</span>
+            <h2 class="h2" data-split>Five products.<br>Every step shown.</h2>
+          </div>
+          <p class="section-head__aside" data-reveal>Each project opens with the final product, then walks back through the problem, research, sketches and CAD that got it there.</p>
+        </header>
+
+        <div class="work-grid">
+          <!-- 01 Helmet -->
+          <a class="card card--5" href="work/helmet.html" data-tilt data-cursor="View" data-reveal>
+            <div class="card__media"><img src="assets/img/helmet/render-side.png" alt="Full-face helmet render in red, white and blue livery" loading="lazy" /></div>
+            <div class="card__top"><span class="card__index mono">01</span><span class="card__badge card__badge--live">Full case study</span></div>
+            <div class="card__meta">
+              <div>
+                <h3 class="card__title">Helmet<br>Design</h3>
+                <p class="card__tags mono">Mobility · Safety · 2025</p>
+              </div>
+              <span class="card__arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            </div>
+            <span class="card__bar"></span>
+          </a>
+
+          <!-- 02 REGEN — full case study -->
+          <a class="card card--7 card--stage" href="work/regen.html" data-tilt data-cursor="View" data-reveal>
+            <div class="card__media"><img src="assets/img/regen/render-side-cutout.png" alt="REGEN energy-harvesting shoe, side view" loading="lazy" /></div>
+            <div class="card__top"><span class="card__index mono">02</span><span class="card__badge card__badge--live">Full case study</span></div>
+            <div class="card__meta">
+              <div>
+                <h3 class="card__title">REGEN<br>Shoes</h3>
+                <p class="card__tags mono">Footwear · Wearable energy · 2025</p>
+              </div>
+              <span class="card__arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            </div>
+            <span class="card__bar"></span>
+          </a>
+
+          <!-- 03 Standing chair -->
+          <a class="card card--7" href="work/chair.html" data-tilt data-cursor="View" data-reveal>
+            <div class="card__media"><img src="assets/img/chair/render-01.jpg" alt="Standing chair with orange knit back roller and grey seat" loading="lazy" /></div>
+            <div class="card__top"><span class="card__index mono">03</span><span class="card__badge card__badge--live">Full case study</span></div>
+            <div class="card__meta">
+              <div>
+                <h3 class="card__title">Standing<br>Chair</h3>
+                <p class="card__tags mono">Furniture · Ergonomics · 2025</p>
+              </div>
+              <span class="card__arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            </div>
+            <span class="card__bar"></span>
+          </a>
+
+          <!-- 04 PRITHVI+ -->
+          <a class="card card--5 card--stage card--portrait" href="work/prithvi.html" data-tilt data-cursor="View" data-reveal>
+            <div class="card__media"><img src="assets/img/prithvi/cad-front-cutout.png" alt="PRITHVI+ kiosk CAD model" loading="lazy" /></div>
+            <div class="card__top"><span class="card__index mono">04</span><span class="card__badge card__badge--live">Full case study</span></div>
+            <div class="card__meta">
+              <div>
+                <h3 class="card__title">PRITHVI+<br>Kiosk</h3>
+                <p class="card__tags mono">Public systems · 2025</p>
+              </div>
+              <span class="card__arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            </div>
+            <span class="card__bar"></span>
+          </a>
+
+          <!-- 05 RE:BOX — add a render at assets/img/rebox/ and swap the ghost text for an <img> -->
+          <article class="card card--12 card--placeholder is-soon" data-tilt data-cursor="Soon" data-reveal>
+            <div class="card__media"><span class="card__ghost" aria-hidden="true">RE:BOX</span></div>
+            <div class="card__top"><span class="card__index mono">05</span><span class="card__badge">Render coming soon</span></div>
+            <div class="card__meta">
+              <div>
+                <h3 class="card__title">RE:BOX<br>Vegetable Display</h3>
+                <p class="card__tags mono">Retail · Sustainability · 2025</p>
+              </div>
+              <span class="card__arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            </div>
+            <span class="card__bar"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <span class="section-head__index mono">02 / Process</span>
+            <h2 class="h2" data-split>From problem<br>to product.</h2>
+          </div>
+          <p class="section-head__aside" data-reveal>The same six stages run through every project, so you can see how I think, not just what I made.</p>
+        </header>
+        <div class="process__track">
+          <span class="process__progress"></span>
+          <div class="process__step" data-reveal><span class="mono">01</span><h3 class="h3">Problem</h3><p>Find the real friction, not the obvious one.</p></div>
+          <div class="process__step" data-reveal><span class="mono">02</span><h3 class="h3">Research</h3><p>Observe, interview, measure, benchmark.</p></div>
+          <div class="process__step" data-reveal><span class="mono">03</span><h3 class="h3">Ideation</h3><p>Sketch fast and sketch many. Kill most of them.</p></div>
+          <div class="process__step" data-reveal><span class="mono">04</span><h3 class="h3">CAD</h3><p>Resolve form, fit and how it's actually made.</p></div>
+          <div class="process__step" data-reveal><span class="mono">05</span><h3 class="h3">Prototype</h3><p>Print it, hold it, break it, fix it.</p></div>
+          <div class="process__step" data-reveal><span class="mono">06</span><h3 class="h3">Final</h3><p>Render, refine, and tell its story.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN LAB ============ -->
+    <section class="section lab" id="lab">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <span class="section-head__index mono">03 / Design Lab</span>
+            <h2 class="h2" data-split>The messy<br>middle.</h2>
+          </div>
+          <p class="section-head__aside" data-reveal>Rough sketches, form explorations and experiments. Hover to pause.</p>
+        </header>
+      </div>
+      <div class="marquee" data-marquee>
+        <div class="marquee__track">
+          <figure class="lab-tile"><img src="assets/img/regen/sketch-sheet-01.jpg" alt="REGEN heel pod and insole sketches" loading="lazy" /><figcaption class="mono">REGEN — heel pod studies</figcaption></figure>
+          <figure class="lab-tile"><img src="assets/img/chair/sketch-sheet-01.jpg" alt="Standing chair form exploration sketches" loading="lazy" /><figcaption class="mono">Chair — form exploration</figcaption></figure>
+          <figure class="lab-tile"><img src="assets/img/helmet/render-mint.webp" alt="Helmet colourway study in mint and grey" loading="lazy" /><figcaption class="mono">Helmet — colourway study</figcaption></figure>
+          <figure class="lab-tile"><img src="assets/img/regen/sketch-sheet-02.jpg" alt="REGEN usage sequence and exploded insole sketches" loading="lazy" /><figcaption class="mono">REGEN — use sequence</figcaption></figure>
+          <figure class="lab-tile"><img src="assets/img/chair/render-02.jpg" alt="Standing chair alternate render" loading="lazy" /><figcaption class="mono">Chair — alt. concept</figcaption></figure>
+        </div>
+      </div>
+      <div class="container">
+        <div class="lab__foot">
+          <span class="mono">Full Design Lab — coming soon</span>
+          <span class="mono">Sketching · Form studies · CMF · Experiments</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about__grid">
+        <div class="portrait" data-reveal>
+          <img src="assets/img/portrait.jpg" alt="Suraj Lagmavar smiling in a yellow printed kurta against an orange wall with festive string lights" loading="lazy" decoding="async" />
+          <span class="portrait__tag mono">Product Design Student — 2026</span>
+        </div>
+        <div class="about__body">
+          <span class="section-head__index mono">04 / About</span>
+          <h2 class="h2" data-split>Hi, I'm<br>Suraj.</h2>
+          <p class="lead" data-reveal>I'm a product design student who loves the whole journey: talking to users, filling sketchbooks, fighting with CAD, and printing prototypes until the thing feels right in the hand. <!-- EDIT: your own intro --></p>
+          <div class="chips" data-reveal>
+            <!-- EDIT: your real skills/tools -->
+            <span class="chip">Sketching</span><span class="chip">Form development</span><span class="chip">User research</span>
+            <span class="chip">Fusion 360</span><span class="chip">KeyShot</span><span class="chip">Blender</span>
+            <span class="chip">3D printing</span><span class="chip">CMF</span><span class="chip">Prototyping</span>
+          </div>
+          <ul class="xp" data-reveal>
+            <!-- EDIT: your real experience -->
+            <li><span class="mono">2025 — Now</span><strong>Design Intern</strong><span>Studio / Company</span></li>
+            <li><span class="mono">2022 — 2026</span><strong>B.Des, Product Design</strong><span>Your University</span></li>
+            <li><span class="mono">2024</span><strong>Award / Exhibition</strong><span>Name of event</span></li>
+          </ul>
+          <div class="about__actions" data-reveal>
+            <a class="btn" href="https://www.linkedin.com/in/suraj-lagmavar-548691274/" target="_blank" rel="noopener" data-magnetic>LinkedIn
+              <svg class="btn__arrow" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M5 3h8v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="mailto:surajlagmavar@gmail.com" data-magnetic>Email me
+              <svg class="btn__arrow" viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <footer class="contact" id="contact">
+    <div class="marquee contact__marquee" data-marquee>
+      <div class="marquee__track">
+        <span class="contact__big display">Let's build <em>what's next</em> —&nbsp;</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="contact__row">
+        <div>
+          <span class="mono">Email</span>
+          <a class="contact__link contact__email" href="mailto:surajlagmavar@gmail.com" data-cursor="Write">surajlagmavar@gmail.com</a>
+        </div>
+        <div>
+          <span class="mono">LinkedIn</span>
+          <a class="contact__link" href="https://www.linkedin.com/in/suraj-lagmavar-548691274/" target="_blank" rel="noopener">/in/suraj-lagmavar ↗</a>
+        </div>
+        <div>
+          <span class="mono">Navigate</span>
+          <a class="contact__link" href="#top">Back to top ↑</a>
+        </div>
+      </div>
+      <div class="footer-bottom mono">
+        <span>© 2026 Suraj Lagmavar</span>
+        <span>Designed &amp; built in my studio</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
+  <script src="js/desk.js"></script>
+</body>
+</html>
